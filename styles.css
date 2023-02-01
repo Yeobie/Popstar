@@ -1,0 +1,52 @@
+body {
+  font-family: "Teko", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  display: block;
+  margin: 0 auto;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(41, 24, 80, 0.9)),
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/276/original/Header2.png?1675206804);
+  filter: brightness(110%);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  font-size: 180px;
+  font-weight: 400;
+}
+
+.subtitle {
+  margin-bottom: 130px;
+}
+
+.subtitle h3 {
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.subtitle a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 20px;
+  background-color: #8210d3;
+  padding: 13px 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
