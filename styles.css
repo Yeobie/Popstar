@@ -116,16 +116,21 @@ h1 {
   max-width: 250px;
 }
 .hyung {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .dongsaeng {
   justify-content: center;
 }
+
 .tannie {
   max-width: 90%;
   display: block;
   margin: 0 auto;
   border-radius: 4px;
+}
+
+.animate__animated {
+  transition: all 400ms ease-in-out;
 }
 
 .accordion {
