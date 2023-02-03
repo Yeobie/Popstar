@@ -71,7 +71,7 @@ hobibutton.addEventListener("click", function () {
   }
 });
 
-let mimiicounter = 1;
+let mimicounter = 1;
 let jiminbutton = document.querySelector("#jiminbutton");
 jiminbutton.addEventListener("click", function () {
   let jimin = document.querySelector("#jimin");
