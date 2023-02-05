@@ -221,6 +221,33 @@ h1 {
   max-width: 85%;
 }
 
+.carousel-caption {
+  background: radial-gradient(
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  max-width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.carousel-caption h5 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.carousel-caption p {
+  margin: 0;
+}
+
 .carousel-control-next {
   right: -45px;
 }
