@@ -18,6 +18,7 @@ body {
 
 section {
   padding: 50px 0px 50px 0px;
+  border-bottom: solid 1px var(--secondary-color);
 }
 /* HEADER */
 
@@ -73,7 +74,6 @@ h1 {
 
 .introduction {
   margin-top: 20px;
-  border-bottom: solid 1px var(--secondary-color);
 }
 
 .groupcol {
@@ -109,7 +109,6 @@ h1 {
 /* MEMBERS */
 
 .members {
-  border-bottom: solid 1px var(--secondary-color);
 }
 .members h2 {
   text-align: center;
