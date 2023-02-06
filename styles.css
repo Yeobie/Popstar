@@ -62,6 +62,11 @@ h1 {
   text-transform: uppercase;
   border-radius: 4px;
   display: inline-block;
+  transition: all 360ms ease-in-out;
+}
+
+.subtitle a:hover {
+  transform: scale(110%);
 }
 
 /* INTRODUCTION */
@@ -222,10 +227,7 @@ h1 {
 }
 
 .carousel-caption {
-  background: radial-gradient(
-    rgba(0, 0, 0, 0.6) 50%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: rgba(0, 0, 0, 0.5);
   max-width: fit-content;
   display: block;
   margin: 0 auto;
@@ -246,6 +248,7 @@ h1 {
 
 .carousel-caption p {
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .carousel-control-next {
