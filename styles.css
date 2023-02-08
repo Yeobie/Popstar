@@ -36,10 +36,18 @@ header {
   justify-content: space-between;
 }
 
-h1 {
+/* h1 {
   margin: 0;
   font-size: 180px;
   font-weight: 400;
+} */
+
+.logo-text {
+  max-width: 30%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  filter: invert(100%);
 }
 
 .subtitle {
@@ -302,4 +310,6 @@ h1 {
 
 .record:hover {
   transform: scale(110%);
+  background-color: rgba(130, 16, 211, 0.3);
+  border: solid 1px var(--secondary-color);
 }
