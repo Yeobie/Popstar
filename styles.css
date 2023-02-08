@@ -20,6 +20,22 @@ section {
   padding: 50px 0px 50px 0px;
   border-bottom: solid 1px var(--secondary-color);
 }
+
+h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+h4 {
+  color: var(--secondary-color);
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 /* HEADER */
 
 header {
@@ -102,7 +118,7 @@ header {
 }
 
 .introduction h2 {
-  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .introduction p {
@@ -115,13 +131,6 @@ header {
 }
 
 /* MEMBERS */
-
-.members h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  letter-spacing: 3px;
-}
 
 .card-member {
   background-color: var(--secondary-color);
@@ -208,18 +217,8 @@ header {
 
 /* DISCOGRAPHY */
 
-.discography h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  letter-spacing: 3px;
-}
-
 .discography h4 {
-  color: var(--secondary-color);
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 .carousel {
   display: block;
@@ -262,21 +261,6 @@ header {
 
 /* RECORDS */
 
-.records h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  letter-spacing: 3px;
-}
-
-.records h4 {
-  color: var(--secondary-color);
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .records a {
   color: var(--secondary-color);
   transition: all 360ms ease-in-out;
@@ -312,4 +296,23 @@ header {
   transform: scale(110%);
   background-color: rgba(130, 16, 211, 0.3);
   border: solid 1px var(--secondary-color);
+}
+
+/*VIDEOS*/
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.embed {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.videos h5 {
+  color: var(--primary-color);
+  text-align: center;
 }
