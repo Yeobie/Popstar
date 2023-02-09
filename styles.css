@@ -10,10 +10,42 @@ body {
   margin: 0;
 }
 
+.navbar {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  padding: 2px 0px 2px 15px;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-right: 50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
+  transition: all 360ms ease-in-out;
+  border-radius: 10px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  transform: scale(110%);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .container {
   max-width: 1200px;
   display: block;
   margin: 0 auto;
+  padding: 0;
 }
 
 section {
@@ -50,6 +82,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 44px;
 }
 
 /* h1 {
