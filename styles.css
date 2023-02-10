@@ -85,12 +85,6 @@ header {
   margin-top: 46px;
 }
 
-/* h1 {
-  margin: 0;
-  font-size: 180px;
-  font-weight: 400;
-} */
-
 .logo-text {
   max-width: 30%;
   display: block;
@@ -356,7 +350,7 @@ header {
 /*FOOTER*/
 
 footer {
-  background-image: linear-gradient(rgba(63, 0, 108, 0.2), rgba(41, 0, 71, 0.9)),
+  background-image: linear-gradient(rgba(63, 0, 108, 0.4), rgba(41, 0, 71, 0.9)),
     url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/873/original/footer.png?1676056396);
   background-size: cover;
   background-repeat: no-repeat;
@@ -367,8 +361,29 @@ footer {
 .grid-3-col {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+  align-items: center;
 }
 
+footer h4 {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-weight: 400;
+}
 footer p {
   color: white;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  color: white;
+  margin: 0px 10px;
 }
