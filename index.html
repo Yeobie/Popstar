@@ -33,6 +33,7 @@
       src="https://kit.fontawesome.com/fcaffe541a.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -97,7 +98,7 @@
       </header>
       <!--INTRODUCTION-->
       <section class="introduction" id="intro">
-        <div class="row intro">
+        <div class="row intro" data-aos="fade-up" data-aos-duration="1500">
           <div class="col-md-5 groupcol">
             <img
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/555/original/section1.jpeg?1675379966"
@@ -128,7 +129,7 @@
             </p>
           </div>
         </div>
-        <div class="row army mt-5">
+        <div class="row army mt-5" data-aos="fade-up" data-aos-duration="1500">
           <div class="col-md-7 army-text">
             <h2>
               ARMY, you are our wings. <br />
@@ -179,8 +180,8 @@
       <!--MEMBERS-->
 
       <section class="members" id="members">
-        <h2>The members</h2>
-        <div class="row hyung">
+        <h2 data-aos="fade-up" data-aos-duration="1000">The members</h2>
+        <div class="row hyung" data-aos="fade-up" data-aos-duration="1200">
           <div class="col-md-3">
             <div class="card-member">
               <img
@@ -366,7 +367,7 @@
             </div>
           </div>
         </div>
-        <div class="row dongsaeng">
+        <div class="row dongsaeng" data-aos="fade-up" data-aos-duration="1200">
           <div class="col-md-3">
             <div class="card-member">
               <img
@@ -511,9 +512,16 @@
       <!--DISCOGRAPHY-->
 
       <section class="discography" id="disco">
-        <h2>Discography</h2>
-        <h4>Slide to discover all of their albums!</h4>
-        <div id="carouseldiscography" class="carousel slide">
+        <h2 data-aos="fade-up" data-aos-duration="1000">Discography</h2>
+        <h4 data-aos="fade-up" data-aos-duration="1000">
+          Slide to discover all of their albums!
+        </h4>
+        <div
+          id="carouseldiscography"
+          class="carousel slide"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
@@ -925,8 +933,10 @@
       <!--RECORDS-->
 
       <section class="records" id="record">
-        <h2>Some of their (many) records</h2>
-        <h4>
+        <h2 data-aos="fade-up" data-aos-duration="1000">
+          Some of their (many) records
+        </h2>
+        <h4 data-aos="fade-up" data-aos-duration="1000">
           BTS has set and broken a huge number of world records. Some of them
           are listed below,
           <a
@@ -937,7 +947,7 @@
           >
         </h4>
         <div class="records-list">
-          <div class="row mb-5">
+          <div class="row mb-5" data-aos="fade-up" data-aos-duration="1200">
             <div class="col-md-3">
               <div class="record">
                 <h3>
@@ -974,7 +984,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" data-aos="fade-up" data-aos-duration="1200">
             <div class="col-md-3">
               <div class="record">
                 <h3>
@@ -1023,14 +1033,16 @@
       <!--VIDEOS-->
 
       <section class="videos" id="video">
-        <h2>(Some of) My favourite videos</h2>
-        <h4>
+        <h2 data-aos="fade-up" data-aos-duration="1000">
+          (Some of) My favourite videos
+        </h2>
+        <h4 data-aos="fade-up" data-aos-duration="1000">
           It's hard to select only a few examples among the many, amazing MVs
           and live performances from BTS. <br />
           But here you can find a few that can only give you the slightest idea
           of what they are capable of doing!
         </h4>
-        <div class="grid-4-col">
+        <div class="grid-4-col" data-aos="fade-up" data-aos-duration="1200">
           <div>
             <h5>We are Bulletproof pt.2</h5>
             <iframe
@@ -1076,7 +1088,7 @@
             ></iframe>
           </div>
         </div>
-        <div class="grid-4-col">
+        <div class="grid-4-col" data-aos="fade-up" data-aos-duration="1200">
           <div>
             <h5>
               "Boy Meets Evil pt.1" + "Boy Meets Evil pt.2" + "Blood
@@ -1197,5 +1209,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
