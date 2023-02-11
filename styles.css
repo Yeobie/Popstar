@@ -22,6 +22,10 @@ body {
   justify-content: flex-end;
 }
 
+.logo {
+  max-width: 20%;
+}
+
 .nav-link {
   margin-right: 50px;
   font-size: 18px;
@@ -124,24 +128,31 @@ header {
 /* INTRODUCTION */
 
 .introduction {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.intro,
+.army {
+  align-items: center;
 }
 
 .groupcol {
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
-.group {
-  max-width: 80%;
+.group,
+.armybomb {
+  max-width: 90%;
   transition: all 360ms ease-in-out;
 }
 
-.group:hover {
+.group:hover,
+.armybomb:hover {
   transform: scale(110%);
 }
 
 .intro-text {
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .introduction h2 {
@@ -151,12 +162,24 @@ header {
 .introduction p {
   color: var(--secondary-color);
   opacity: 0.8;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.5;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  background-color: rgba(130, 15, 212, 0.1);
+  border-radius: 10px;
+  padding: 10px;
 }
 
+.army a {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.introduction h5 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 /* MEMBERS */
 
 .card-member {
@@ -386,4 +409,16 @@ footer ul {
 footer a {
   color: white;
   margin: 0px 10px;
+  transition: all 360ms ease-in-out;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+footer li {
+  transition: all 360ms ease-in-out;
+}
+footer li:hover {
+  transform: scale(130%);
 }
