@@ -218,9 +218,10 @@ header {
 
 .accordion-button {
   background-color: var(--secondary-color);
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 2px;
   color: var(--primary-color);
+  padding: 16px 0px;
 }
 
 .accordion-button:not(.collapsed) {
@@ -247,6 +248,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.accordion-body p {
+  color: var(--tertiary-color);
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .card-button {
@@ -288,6 +295,7 @@ header {
 .carousel-caption h3 {
   margin: 0;
   letter-spacing: 2px;
+  font-weight: 700;
 }
 
 .carousel-caption h5 {
@@ -298,7 +306,8 @@ header {
 
 .carousel-caption p {
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 .carousel-control-next {
@@ -406,13 +415,13 @@ footer ul {
   justify-content: center;
 }
 
-footer a {
+.social {
   color: white;
   margin: 0px 10px;
   transition: all 360ms ease-in-out;
 }
 
-footer a:hover {
+.social:hover {
   color: var(--primary-color);
 }
 
@@ -421,4 +430,12 @@ footer li {
 }
 footer li:hover {
   transform: scale(130%);
+}
+
+.github {
+  color: var(--secondary-color);
+}
+
+.github:hover {
+  color: var(--secondary-color);
 }
