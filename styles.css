@@ -201,9 +201,127 @@ header {
 
 .tannie {
   max-width: 90%;
-  display: block;
-  margin: 0 auto;
   border-radius: 4px;
+  margin-left: 12px;
+}
+
+.namwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.namwrapper > .rm1 + .rm2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.namwrapper.active > .rm1 + .rm2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.jinwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.jinwrapper > .jin1 + .jin2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.jinwrapper.active > .jin1 + .jin2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.sugawrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sugawrapper > .suga1 + .suga2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.sugawrapper.active > .suga1 + .suga2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.hobiwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hobiwrapper > .hobi1 + .hobi2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.hobiwrapper.active > .hobi1 + .hobi2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.mimiwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mimiwrapper > .mimi1 + .mimi2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.mimiwrapper.active > .mimi1 + .mimi2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.taewrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.taewrapper > .tae1 + .tae2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.taewrapper.active > .tae1 + .tae2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
+}
+
+.jkwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.jkwrapper > .jk1 + .jk2 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 360ms ease-in-out;
+}
+
+.jkwrapper.active > .jk1 + .jk2 {
+  opacity: 1;
+  transition: opacity 360ms ease-in-out;
 }
 
 .accordion {
