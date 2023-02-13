@@ -202,17 +202,16 @@ header {
 .tannie {
   max-width: 90%;
   border-radius: 4px;
-  margin-left: 12px;
 }
 
 .namwrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .namwrapper > .rm1 + .rm2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -224,12 +223,12 @@ header {
 
 .jinwrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .jinwrapper > .jin1 + .jin2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -241,12 +240,12 @@ header {
 
 .sugawrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .sugawrapper > .suga1 + .suga2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -258,12 +257,12 @@ header {
 
 .hobiwrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .hobiwrapper > .hobi1 + .hobi2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -275,12 +274,12 @@ header {
 
 .mimiwrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .mimiwrapper > .mimi1 + .mimi2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -292,12 +291,12 @@ header {
 
 .taewrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .taewrapper > .tae1 + .tae2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
@@ -309,12 +308,12 @@ header {
 
 .jkwrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .jkwrapper > .jk1 + .jk2 {
   position: absolute;
-  left: 0;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
