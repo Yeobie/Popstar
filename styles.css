@@ -204,121 +204,19 @@ header {
   border-radius: 4px;
 }
 
-.namwrapper {
+.wrapper {
   position: relative;
   display: flex;
   justify-content: space-around;
 }
 
-.namwrapper > .rm1 + .rm2 {
+.wrapper > .bts1 + .bts2 {
   position: absolute;
   opacity: 0;
   transition: opacity 360ms ease-in-out;
 }
 
-.namwrapper.active > .rm1 + .rm2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.jinwrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.jinwrapper > .jin1 + .jin2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.jinwrapper.active > .jin1 + .jin2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.sugawrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.sugawrapper > .suga1 + .suga2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.sugawrapper.active > .suga1 + .suga2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.hobiwrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.hobiwrapper > .hobi1 + .hobi2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.hobiwrapper.active > .hobi1 + .hobi2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.mimiwrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.mimiwrapper > .mimi1 + .mimi2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.mimiwrapper.active > .mimi1 + .mimi2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.taewrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.taewrapper > .tae1 + .tae2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.taewrapper.active > .tae1 + .tae2 {
-  opacity: 1;
-  transition: opacity 360ms ease-in-out;
-}
-
-.jkwrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-}
-
-.jkwrapper > .jk1 + .jk2 {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 360ms ease-in-out;
-}
-
-.jkwrapper.active > .jk1 + .jk2 {
+.wrapper.active > .bts1 + .bts2 {
   opacity: 1;
   transition: opacity 360ms ease-in-out;
 }
