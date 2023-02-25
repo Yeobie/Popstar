@@ -472,6 +472,9 @@ footer li:hover {
 /*SMARTPHONE SCREENS*/
 
 @media (max-width: 767px) {
+  .navbar {
+    padding: 2px 0px 5px 0px;
+  }
   .nav-link:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
