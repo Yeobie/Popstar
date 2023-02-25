@@ -160,12 +160,13 @@ header {
 }
 
 .introduction p {
+  font-family: "Roboto Condensed", sans-serif;
   color: var(--secondary-color);
   opacity: 0.8;
-  font-size: 19px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.8;
   font-weight: 300;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px;
   background-color: rgba(130, 15, 212, 0.1);
   border-radius: 10px;
   padding: 10px;
@@ -266,9 +267,10 @@ header {
 }
 
 .accordion-body p {
+  font-family: "Roboto Condensed", sans-serif;
   color: var(--tertiary-color);
+  font-size: 14px;
   font-weight: 400;
-  letter-spacing: 1px;
 }
 
 .card-button {
@@ -320,9 +322,11 @@ header {
 }
 
 .carousel-caption p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
   margin: 0;
-  letter-spacing: 2px;
-  font-weight: 300;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .carousel-control-next {
@@ -353,8 +357,10 @@ header {
   color: var(--primary-color);
 }
 .records-list p {
+  font-family: "Roboto Condensed", sans-serif;
   color: var(--secondary-color);
-  letter-spacing: 2px;
+  font-size: 15px;
+  letter-spacing: 1px;
   text-align: center;
   font-weight: 300;
 }
@@ -400,7 +406,7 @@ header {
 footer {
   background-image: linear-gradient(rgba(63, 0, 108, 0.4), rgba(41, 0, 71, 0.9)),
     url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/873/original/footer.png?1676056396);
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   padding: 50px 20px;
   margin-top: 30px;
@@ -419,8 +425,10 @@ footer h4 {
   font-weight: 400;
 }
 footer p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 13px;
   color: white;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 300;
 }
 
@@ -474,7 +482,7 @@ footer li:hover {
 
   header {
     height: auto;
-    margin-top: 35px;
+    margin-top: 40px;
   }
 
   .logo-text {
@@ -483,7 +491,7 @@ footer li:hover {
 
   .subtitle {
     margin-bottom: 10px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   .subtitle h3 {
@@ -492,8 +500,7 @@ footer li:hover {
   }
 
   .subtitle a {
-    font-size: 12px;
-    padding: 10px;
+    display: none;
   }
 
   /*INTRO*/
@@ -596,6 +603,7 @@ footer li:hover {
   .record {
     margin: 5px 10px;
     padding: 10px 20px;
+    transition: none;
   }
 
   .record p {
@@ -603,8 +611,68 @@ footer li:hover {
   }
 
   .record:hover {
-    transform: scale(105%);
-    background-color: rgba(130, 16, 211, 0.3);
-    border: solid 1px var(--secondary-color);
+    transform: none;
+    background-color: rgba(237, 219, 249, 0.1);
+    border: solid 1px var(--primary-color);
+  }
+
+  /*VIDEOS*/
+
+  .grid-4-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .embed {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  /*FOOTER*/
+
+  footer {
+    background-image: none;
+    background-color: var(--primary-color);
+    height: auto;
+    padding: 20px;
+  }
+
+  .grid-3-col {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  footer h4 {
+    padding-left: 0px;
+  }
+
+  .social {
+    color: white;
+    margin: 0px 10px;
+    transition: all 360ms ease-in-out;
+  }
+
+  .social:hover {
+    color: white;
+  }
+
+  footer li {
+    transition: none;
+  }
+  footer li:hover {
+    transform: scale(none);
+  }
+
+  .github {
+    color: var(--tertiary-color);
+  }
+
+  .github:hover {
+    color: var(--tertiary-color);
   }
 }
