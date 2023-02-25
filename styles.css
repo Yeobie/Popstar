@@ -670,6 +670,7 @@ footer li:hover {
 
   .github {
     color: var(--tertiary-color);
+    font-weight: bold;
   }
 
   .github:hover {
