@@ -532,6 +532,12 @@ footer li:hover {
     max-width: 60%;
     display: block;
     margin: 0 auto;
+    transition: none;
+  }
+
+  .group:hover,
+  .armybomb:hover {
+    transform: scale(none);
   }
 
   .intro-text,
@@ -588,6 +594,15 @@ footer li:hover {
     max-width: 100%;
   }
 
+  .carousel-control-prev {
+    left: -15px;
+    bottom: 40%;
+  }
+
+  .carousel-control-next {
+    right: -15px;
+    bottom: 40%;
+  }
   .carousel-caption {
     position: unset;
     background: rgba(0, 0, 0, 0);
@@ -727,7 +742,7 @@ footer li:hover {
   }
 
   .subtitle {
-    margin-bottom: 3 0px;
+    margin-bottom: 30px;
   }
 
   .subtitle h3 {
@@ -754,6 +769,12 @@ footer li:hover {
     max-width: 40%;
     display: block;
     margin: 0 auto;
+    transition: none;
+  }
+
+  .group:hover,
+  .armybomb:hover {
+    transform: scale(none);
   }
 
   .intro-text,
@@ -788,6 +809,11 @@ footer li:hover {
     margin-bottom: 0px;
   }
 
+  .hyung > *,
+  .dongsaeng > * {
+    padding: 0px 3px;
+  }
+
   .accordion-button {
     font-size: 15px;
     padding: 10px 0px;
@@ -798,6 +824,7 @@ footer li:hover {
   }
 
   .card-button {
+    letter-spacing: 1px;
     padding: 8px;
   }
 
