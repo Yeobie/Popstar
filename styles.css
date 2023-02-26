@@ -537,7 +537,7 @@ footer li:hover {
 
   .group:hover,
   .armybomb:hover {
-    transform: scale(none);
+    transform: none;
   }
 
   .intro-text,
@@ -774,7 +774,7 @@ footer li:hover {
 
   .group:hover,
   .armybomb:hover {
-    transform: scale(none);
+    transform: none;
   }
 
   .intro-text,
