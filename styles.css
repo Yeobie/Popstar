@@ -668,7 +668,7 @@ footer li:hover {
   .social {
     color: white;
     margin: 0px 10px;
-    transition: all 360ms ease-in-out;
+    transition: none;
   }
 
   .social:hover {
@@ -689,5 +689,236 @@ footer li:hover {
 
   .github:hover {
     color: var(--tertiary-color);
+  }
+}
+
+/*TABLET SCREENS*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    padding: 2px 0px 5px 0px;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    transform: scale(none);
+  }
+
+  section {
+    padding: 30px 0px;
+  }
+  .navbar-nav {
+    align-items: flex-end;
+  }
+
+  .nav-link {
+    margin-right: 20px;
+  }
+
+  /*HEADER*/
+
+  header {
+    height: 40vh;
+  }
+
+  .logo-text {
+    max-width: 25%;
+  }
+
+  .subtitle {
+    margin-bottom: 3 0px;
+  }
+
+  .subtitle h3 {
+    font-size: 20px;
+    padding: 0px 10px;
+  }
+
+  .subtitle a {
+    display: none;
+  }
+
+  /*INTRO*/
+
+  .introduction {
+    margin-top: 0px;
+  }
+
+  .groupcol {
+    padding: 0;
+  }
+
+  .group,
+  .armybomb {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .intro-text,
+  .army-text {
+    padding: 0px 30px;
+  }
+
+  .introduction h2 {
+    margin: 10px;
+  }
+
+  .introduction p {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .introduction h5 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /*MEMBERS*/
+
+  .card-member {
+    max-width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .hyung {
+    margin-bottom: 0px;
+  }
+
+  .accordion-button {
+    font-size: 15px;
+    padding: 10px 0px;
+  }
+
+  .accordion-body {
+    padding: 5px 5px 10px 5px;
+  }
+
+  .card-button {
+    padding: 8px;
+  }
+
+  /* DISCOGRAPHY */
+
+  .discography h4 {
+    margin-bottom: 5px;
+  }
+
+  .carousel {
+    max-width: 95%;
+  }
+
+  .carousel-caption {
+    position: unset;
+    background: rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .carousel-caption h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .carousel-caption p {
+    font-size: 15px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    bottom: 20%;
+  }
+
+  /* RECORDS */
+
+  .records h4 {
+    padding: 0px 20px;
+  }
+
+  .records .row {
+    margin-bottom: 0;
+  }
+
+  .record {
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: none;
+  }
+
+  .record p {
+    margin: 0;
+  }
+
+  .record:hover {
+    transform: none;
+    background-color: rgba(237, 219, 249, 0.1);
+    border: solid 1px var(--primary-color);
+  }
+
+  /*VIDEOS*/
+
+  .videos h4 {
+    padding: 0px 20px;
+  }
+
+  .grid-4-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .embed {
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  /*FOOTER*/
+
+  footer {
+    background-image: linear-gradient(
+        rgba(63, 0, 108, 0.6),
+        rgba(41, 0, 71, 0.9)
+      ),
+      url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/873/original/footer.png?1676056396);
+    padding: 50px 20px;
+    background-size: 150%;
+    background-position: center;
+  }
+
+  .grid-3-col {
+    grid-gap: 30px;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+
+  footer h4 {
+    padding-left: 0px;
+  }
+
+  .social {
+    color: white;
+    margin: 0px 10px;
+    transition: none;
+  }
+
+  .social:hover {
+    color: white;
+  }
+
+  footer li {
+    transition: none;
+  }
+  footer li:hover {
+    transform: scale(none);
   }
 }
