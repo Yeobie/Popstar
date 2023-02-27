@@ -33,13 +33,974 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/fcaffe541a.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #820fd4;
+        --secondary-color: #eddbf9;
+        --tertiary-color: #202020;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Teko", sans-serif;
+        background-color: var(--tertiary-color);
+        margin: 0;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        display: block;
+        margin: 0 auto;
+        background-color: var(--primary-color);
+        padding: 2px 0px 0px 15px;
+      }
+
+      .navbar-collapse {
+        justify-content: flex-end;
+      }
+
+      .logo {
+        max-width: 20%;
+      }
+
+      .nav-link {
+        margin-right: 50px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: var(--secondary-color);
+        transition: all 360ms ease-in-out;
+        border-radius: 10px;
+      }
+
+      .nav-link:hover {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        transform: scale(110%);
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      .container {
+        max-width: 1200px;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      section {
+        padding: 50px 0px 50px 0px;
+        border-bottom: solid 1px var(--secondary-color);
+      }
+
+      h2 {
+        text-align: center;
+        color: var(--primary-color);
+        margin-bottom: 30px;
+        letter-spacing: 3px;
+      }
+
+      h4 {
+        color: var(--secondary-color);
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      /* HEADER */
+
+      header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(41, 24, 80, 0.9)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/065/276/original/Header2.png?1675206804);
+        filter: brightness(120%);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 46px;
+        height: 100vh;
+      }
+
+      .logo-text {
+        max-width: 30%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        filter: invert(100%);
+      }
+
+      .subtitle {
+        margin-bottom: 80px;
+        font-size: 1.2em;
+      }
+
+      .subtitle h3 {
+        font-weight: 300;
+        letter-spacing: 3px;
+      }
+
+      .subtitle a {
+        text-decoration: none;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 3px;
+        font-size: 20px;
+        background-color: var(--primary-color);
+        padding: 13px 20px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        display: inline-block;
+        transition: all 360ms ease-in-out;
+      }
+
+      .subtitle a:hover {
+        transform: scale(110%);
+      }
+
+      /* INTRODUCTION */
+
+      .introduction {
+        margin-top: 10px;
+      }
+
+      .intro,
+      .army {
+        align-items: center;
+      }
+
+      .groupcol {
+        padding-left: 50px;
+      }
+
+      .group,
+      .armybomb {
+        max-width: 90%;
+        transition: all 360ms ease-in-out;
+      }
+
+      .group:hover,
+      .armybomb:hover {
+        transform: scale(110%);
+      }
+
+      .intro-text {
+        padding-right: 50px;
+      }
+
+      .introduction h2 {
+        margin-bottom: 10px;
+      }
+
+      .introduction p {
+        font-family: "Roboto Condensed", sans-serif;
+        color: var(--secondary-color);
+        opacity: 0.8;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        background-color: rgba(130, 15, 212, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .army a {
+        color: var(--primary-color);
+        font-weight: 400;
+      }
+
+      .introduction h5 {
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+      /* MEMBERS */
+
+      .card-member {
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+        padding: 5px 0px;
+        max-width: 90%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .hyung {
+        margin-bottom: 30px;
+      }
+
+      .dongsaeng {
+        justify-content: center;
+      }
+
+      .tannie {
+        max-width: 90%;
+        border-radius: 4px;
+      }
+
+      .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .wrapper > .bts1 + .bts2 {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 360ms ease-in-out;
+      }
+
+      .wrapper.active > .bts1 + .bts2 {
+        opacity: 1;
+        transition: opacity 360ms ease-in-out;
+      }
+
+      .accordion {
+        max-width: 220px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .accordion-item {
+        border-radius: 0;
+      }
+
+      .accordion-button {
+        background-color: var(--secondary-color);
+        font-size: 22px;
+        letter-spacing: 2px;
+        color: var(--primary-color);
+        padding: 16px 0px;
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        box-shadow: none;
+      }
+
+      .accordion-button:not(.collapsed)::after {
+        background-image: var(--bs-accordion-btn-icon);
+      }
+
+      .accordion-button:focus {
+        z-index: 0;
+        border-color: none;
+        outline: 0;
+        box-shadow: none;
+      }
+
+      .accordion-body {
+        background-color: var(--secondary-color);
+        padding: 10px;
+        color: var(--tertiary-color);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .accordion-body p {
+        font-family: "Roboto Condensed", sans-serif;
+        color: var(--tertiary-color);
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .card-button {
+        text-decoration: none;
+        align-items: center;
+        color: var(--primary-color);
+        letter-spacing: 2px;
+        padding: 10px 16px;
+        border-radius: 4px;
+        transition: all 360ms ease-in-out;
+        border: 1px solid var(--primary-color);
+      }
+
+      .card-button:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* DISCOGRAPHY */
+
+      .discography h4 {
+        margin-bottom: 10px;
+      }
+      .carousel {
+        display: block;
+        margin: 0 auto;
+        max-width: 85%;
+      }
+
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        max-width: fit-content;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 12px;
+        padding: 10px;
+      }
+
+      .carousel-caption h3 {
+        margin: 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+
+      .carousel-caption h5 {
+        margin: 0;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+
+      .carousel-caption p {
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 15px;
+        margin: 0;
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
+
+      .carousel-control-next {
+        right: -45px;
+      }
+
+      .carousel-control-prev {
+        left: -45px;
+      }
+
+      /* RECORDS */
+
+      .records a {
+        color: var(--secondary-color);
+        transition: all 360ms ease-in-out;
+      }
+
+      .records a:hover {
+        color: var(--primary-color);
+      }
+
+      .records .row {
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .records-list h3 {
+        text-align: center;
+        color: var(--primary-color);
+      }
+      .records-list p {
+        font-family: "Roboto Condensed", sans-serif;
+        color: var(--secondary-color);
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 300;
+      }
+
+      .record {
+        background-color: rgba(237, 219, 249, 0.1);
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 1px var(--primary-color);
+        transition: all 360ms ease-in-out;
+      }
+
+      .record:hover {
+        transform: scale(110%);
+        background-color: rgba(130, 16, 211, 0.3);
+        border: solid 1px var(--secondary-color);
+      }
+
+      /*VIDEOS*/
+
+      .grid-4-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .embed {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+      }
+
+      .videos h5 {
+        color: var(--primary-color);
+        text-align: center;
+      }
+
+      .videos {
+        border-bottom: none;
+      }
+      /*FOOTER*/
+
+      footer {
+        background-image: linear-gradient(
+            rgba(63, 0, 108, 0.4),
+            rgba(41, 0, 71, 0.9)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/873/original/footer.png?1676056396);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        padding: 50px 20px;
+        margin-top: 30px;
+      }
+
+      .grid-3-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 60px;
+        align-items: center;
+      }
+
+      footer h4 {
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-weight: 400;
+      }
+      footer p {
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 13px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .social {
+        color: white;
+        margin: 0px 10px;
+        transition: all 360ms ease-in-out;
+      }
+
+      .social:hover {
+        color: var(--primary-color);
+      }
+
+      footer li {
+        transition: all 360ms ease-in-out;
+      }
+      footer li:hover {
+        transform: scale(130%);
+      }
+
+      .github,
+      .email {
+        color: var(--secondary-color);
+      }
+
+      .github:hover,
+      .email:hover {
+        color: var(--secondary-color);
+      }
+
+      /*SMARTPHONE SCREENS*/
+
+      @media (max-width: 767px) {
+        .navbar {
+          padding: 2px 0px 5px 0px;
+        }
+        .nav-link:hover {
+          color: var(--primary-color);
+          background-color: var(--secondary-color);
+          transform: scale(none);
+        }
+
+        section {
+          padding: 30px 0px;
+        }
+        .navbar-nav {
+          align-items: flex-end;
+        }
+
+        .nav-link {
+          margin-right: 20px;
+        }
+
+        /*HEADER*/
+
+        header {
+          height: auto;
+          margin-top: 40px;
+        }
+
+        .logo-text {
+          max-width: 25%;
+        }
+
+        .subtitle {
+          margin-bottom: 10px;
+          margin-top: 100px;
+        }
+
+        .subtitle h3 {
+          font-size: 15px;
+          padding: 0px 10px;
+        }
+
+        .subtitle a {
+          display: none;
+        }
+
+        /*INTRO*/
+
+        .introduction {
+          margin-top: 0px;
+        }
+
+        .groupcol {
+          padding: 0;
+        }
+
+        .group,
+        .armybomb {
+          max-width: 70%;
+          display: block;
+          margin: 0 auto;
+          transition: none;
+        }
+
+        .group:hover,
+        .armybomb:hover {
+          transform: none;
+        }
+
+        .intro-text,
+        .army-text {
+          padding: 0px 30px;
+        }
+
+        .introduction h2 {
+          margin: 10px;
+        }
+
+        .introduction p {
+          font-size: 15px;
+          letter-spacing: 2px;
+        }
+
+        .introduction h5 {
+          font-weight: 300;
+          letter-spacing: 1px;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        /*MEMBERS*/
+
+        .card-member {
+          max-width: 60%;
+          margin-bottom: 10px;
+        }
+
+        .hyung {
+          margin-bottom: 0px;
+        }
+
+        .accordion-button {
+          font-size: 20px;
+        }
+
+        .accordion-body {
+          padding: 5px 5px 10px 5px;
+        }
+
+        .card-button {
+          padding: 8px;
+        }
+
+        /* DISCOGRAPHY */
+
+        .discography h4 {
+          margin-bottom: 5px;
+        }
+
+        .carousel {
+          max-width: 100%;
+        }
+
+        .carousel-control-prev {
+          left: -15px;
+          bottom: 40%;
+        }
+
+        .carousel-control-next {
+          right: -15px;
+          bottom: 40%;
+        }
+        .carousel-caption {
+          position: unset;
+          background: rgba(0, 0, 0, 0);
+          margin-bottom: 0px;
+        }
+
+        .carousel-caption h3 {
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .carousel-caption h5 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+
+        .carousel-caption p {
+          font-size: 15px;
+        }
+
+        /* RECORDS */
+
+        .records .row {
+          margin-bottom: 0;
+        }
+
+        .record {
+          margin: 5px 10px;
+          padding: 10px 20px;
+          transition: none;
+        }
+
+        .record p {
+          margin: 0;
+        }
+
+        .record:hover {
+          transform: none;
+          background-color: rgba(237, 219, 249, 0.1);
+          border: solid 1px var(--primary-color);
+        }
+
+        /*VIDEOS*/
+
+        .grid-4-col {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .embed {
+          max-width: 100%;
+          aspect-ratio: 16/9;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+
+        /*FOOTER*/
+
+        footer {
+          background-image: none;
+          background-color: var(--primary-color);
+          height: auto;
+          padding: 20px;
+        }
+
+        .grid-3-col {
+          grid-template-columns: 1fr;
+          grid-gap: 20px;
+        }
+
+        footer h4 {
+          padding-left: 0px;
+        }
+
+        .social {
+          color: white;
+          margin: 0px 10px;
+          transition: none;
+        }
+
+        .social:hover {
+          color: white;
+        }
+
+        footer li {
+          transition: none;
+        }
+        footer li:hover {
+          transform: scale(none);
+        }
+
+        .github,
+        .email {
+          color: var(--tertiary-color);
+          font-weight: bold;
+        }
+
+        .github:hover,
+        .email:hover {
+          color: var(--tertiary-color);
+        }
+      }
+
+      /*TABLET SCREENS*/
+
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .navbar {
+          padding: 2px 0px 5px 0px;
+        }
+
+        .nav-link:hover {
+          color: var(--primary-color);
+          background-color: var(--secondary-color);
+          transform: scale(none);
+        }
+
+        section {
+          padding: 30px 0px;
+        }
+        .navbar-nav {
+          align-items: flex-end;
+        }
+
+        .nav-link {
+          margin-right: 20px;
+        }
+
+        /*HEADER*/
+
+        header {
+          height: 40vh;
+        }
+
+        .logo-text {
+          max-width: 25%;
+        }
+
+        .subtitle {
+          margin-bottom: 30px;
+        }
+
+        .subtitle h3 {
+          font-size: 20px;
+          padding: 0px 10px;
+        }
+
+        .subtitle a {
+          display: none;
+        }
+
+        /*INTRO*/
+
+        .introduction {
+          margin-top: 0px;
+        }
+
+        .groupcol {
+          padding: 0;
+        }
+
+        .group,
+        .armybomb {
+          max-width: 40%;
+          display: block;
+          margin: 0 auto;
+          transition: none;
+        }
+
+        .group:hover,
+        .armybomb:hover {
+          transform: none;
+        }
+
+        .intro-text,
+        .army-text {
+          padding: 0px 30px;
+        }
+
+        .introduction h2 {
+          margin: 10px;
+        }
+
+        .introduction p {
+          font-size: 13px;
+          letter-spacing: 1.5px;
+        }
+
+        .introduction h5 {
+          font-weight: 300;
+          letter-spacing: 1px;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        /*MEMBERS*/
+
+        .card-member {
+          max-width: 90%;
+          margin-bottom: 10px;
+        }
+
+        .hyung {
+          margin-bottom: 0px;
+        }
+
+        .hyung > *,
+        .dongsaeng > * {
+          padding: 0px 3px;
+        }
+
+        .accordion-button {
+          font-size: 15px;
+          padding: 10px 0px;
+        }
+
+        .accordion-body {
+          padding: 5px 5px 10px 5px;
+        }
+
+        .card-button {
+          letter-spacing: 1px;
+          padding: 8px;
+        }
+
+        /* DISCOGRAPHY */
+
+        .discography h4 {
+          margin-bottom: 5px;
+        }
+
+        .carousel {
+          max-width: 95%;
+        }
+
+        .carousel-caption {
+          position: unset;
+          background: rgba(0, 0, 0, 0);
+          margin-bottom: 0px;
+        }
+
+        .carousel-caption h3 {
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        .carousel-caption h5 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+
+        .carousel-caption p {
+          font-size: 15px;
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+          bottom: 20%;
+        }
+
+        /* RECORDS */
+
+        .records h4 {
+          padding: 0px 20px;
+        }
+
+        .records .row {
+          margin-bottom: 0;
+        }
+
+        .record {
+          margin-bottom: 20px;
+          padding: 10px;
+          transition: none;
+        }
+
+        .record p {
+          margin: 0;
+        }
+
+        .record:hover {
+          transform: none;
+          background-color: rgba(237, 219, 249, 0.1);
+          border: solid 1px var(--primary-color);
+        }
+
+        /*VIDEOS*/
+
+        .videos h4 {
+          padding: 0px 20px;
+        }
+
+        .grid-4-col {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 5px;
+          margin-bottom: 20px;
+        }
+
+        .embed {
+          max-width: 100%;
+          aspect-ratio: 16/9;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+
+        /*FOOTER*/
+
+        footer {
+          background-image: linear-gradient(
+              rgba(63, 0, 108, 0.6),
+              rgba(41, 0, 71, 0.9)
+            ),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/873/original/footer.png?1676056396);
+          padding: 50px 20px;
+          background-size: 150%;
+          background-position: center;
+        }
+
+        .grid-3-col {
+          grid-gap: 30px;
+          grid-template-columns: 1fr 2fr 2fr;
+        }
+
+        footer h4 {
+          padding-left: 0px;
+        }
+
+        .social {
+          color: white;
+          margin: 0px 10px;
+          transition: none;
+        }
+
+        .social:hover {
+          color: white;
+        }
+
+        footer li {
+          transition: none;
+        }
+        footer li:hover {
+          transform: scale(none);
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -1337,7 +2298,15 @@
               I'm Ilaria from Italy. I'm a Support Operations Manager in Berlin
               and I've learned front-end coding with the workshops from
               SheCodes. Now I'm trying to create a portfolio with my front-end
-              projects and I'm excited to share this one with you all!
+              projects and I'm excited to share this one with you all! You can
+              get in touch with me at
+              <a
+                href="mailto:ilaria.vilardi7@gmail.com"
+                title="my email"
+                target="_blank"
+                class="email"
+                >ilaria.vilardi7@gmail.com</a
+              >.
             </p>
           </div>
         </div>
@@ -1349,10 +2318,58 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      document
+        .querySelector("#nambutton")
+        .addEventListener("click", function () {
+          let namwrapper = document.querySelector(".namwrapper");
+          namwrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#jinbutton")
+        .addEventListener("click", function () {
+          let jinwrapper = document.querySelector(".jinwrapper");
+          jinwrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#sugabutton")
+        .addEventListener("click", function () {
+          let sugawrapper = document.querySelector(".sugawrapper");
+          sugawrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#hobibutton")
+        .addEventListener("click", function () {
+          let hobiwrapper = document.querySelector(".hobiwrapper");
+          hobiwrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#jiminbutton")
+        .addEventListener("click", function () {
+          let mimiwrapper = document.querySelector(".mimiwrapper");
+          mimiwrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#tetebutton")
+        .addEventListener("click", function () {
+          let taewrapper = document.querySelector(".taewrapper");
+          taewrapper.classList.toggle("active");
+        });
+
+      document
+        .querySelector("#kookiebutton")
+        .addEventListener("click", function () {
+          let jkwrapper = document.querySelector(".jkwrapper");
+          jkwrapper.classList.toggle("active");
+        });
     </script>
   </body>
 </html>
